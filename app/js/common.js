@@ -1,84 +1,5 @@
 $(function() {
 
-
-//-----------------------------calculator---------------------------
-$(function() {
- 
-(function quantityProducts() {
-    var $quantityArrowMinus = $(".minus");
-    var $quantityArrowPlus = $(".pluse");
-    var $quantityNum = $(".num");
- 
-    $quantityArrowMinus.click(quantityMinus);
-    $quantityArrowPlus.click(quantityPlus);
- 
-    function quantityMinus() {
-      if ($quantityNum.val() > 1) {
-        $quantityNum.val(+$quantityNum.val() - 1);
-
-          var value = $('.number').val();
-          var price = $('.number').data('price');
-
-          var month = Math.round(price * value);
-          $('.price').text(month);
-
-      }
-    }
- 
-    function quantityPlus() {
-      $quantityNum.val(+$quantityNum.val() + 1);
-
-        var value = $('.number').val();
-        var price = $('.number').data('price');
-
-        var month = Math.round(price * value);
-        $('.price').text(month);
-    }
-  })();
- 
-});
-
-//-----------------------------slider---------------------------
-var swiper = new Swiper('.slider__container', {
-  slidesPerView: 4,
-  spaceBetween: 110,
-  navigation: {
-      nextEl: '.slider__arrow-next',
-      prevEl: '.slider__arrow-prev',
-  },
-  breakpoints: {
-    576: {
-      slidesPerView: 1,
-      spaceBetween: 20
-    },
-    768: {
-      slidesPerView: 2,
-      spaceBetween: 20
-    },
-    1200: {
-      slidesPerView: 3,
-      spaceBetween: 30
-    }
-  }
-});
-
-var swiper = new Swiper('.trend__container', {
-  slidesPerView: 3,
-  spaceBetween: 2,
-  navigation: {
-      nextEl: '.trend__arrow-prev',
-      prevEl: '.trend__arrow-next',
-  },
-  breakpoints: {
-    576: {
-      slidesPerView: 1,
-    },
-    768: {
-      slidesPerView: 2,
-    }
-  }
-});
-
 //------------------------------гамбургер-----------------------------
 $('.hamburger--3dx').click(function() {
   $(this).toggleClass('is-active');
@@ -116,27 +37,6 @@ $('.hamburger--3dx').click(function() {
         subject: jQuery(".order-form").find("input[name=subject]").val()
       };
       ajaxSend('.order-form', t);
-    }
-  });
-
-  $(".question-form").validate({
-    messages: {
-      name: "Введите ваше Имя",
-      phone: "Введите ваш телефон",
-    },
-    rules: {
-      "phone": {
-        required: true,
-        phoneno: true
-      }
-    },
-    submitHandler: function(form) {
-      var t = {
-        name: jQuery(".question-form").find("input[name=name]").val(),
-        phone: jQuery(".question-form").find("input[name=phone]").val(),
-        subject: jQuery(".question-form").find("input[name=subject]").val()
-      };
-      ajaxSend('.question-form', t);
     }
   });
 
