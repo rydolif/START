@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<title>start</title>
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="icon" href="img/favicon.ico">
+	<meta name="theme-color" content="#000">
+
+	<link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<body>
+
+	<div class="preloader">
+		<div class="pulse"></div>
+	</div>
+
+	<header class="header">
+		<div class="container">
+			<div class="header__container">
+		
+				<div class="header__logo">
+					<a href="index.html"><img src="img/logo.svg" alt="logo" width="70" height="75"></a>
+					<a href="index.html">START</a>
+				</div>
+
+				<button class="hamburger hamburger--3dx" type="button">
+					<span class="hamburger-box">
+						<span class="hamburger-inner"></span>
+					</span>
+				</button>
+
+				<nav class="nav">
+					<ul>
+						<li><a href="index.html">Главная</a></li>
+						<li><a href="catalog.html">Каталог</a></li>
+						<li><a href="about.html">О нас</a></li>
+						<li><a href="contacts.html">Контакты</a></li>
+					</ul>
+				</nav>
+
+			</div>
+		</div>
+	</header>
+
+	<main class="main">
+		
+		<section class="section">
+			<div class="container"></div>
+		</section>
+
+	</main>
+
+	<footer class="footer">
+		<div class="container">
+
+		</div>
+	</footer>
+
+
+
+	<div class="modal" id="order">
+
+			<form action="sendmail.php" class="order-form" method="post">
+
+				<input type="hidden" name="subject" value="Оформление заказа">
+				<input type="hidden" name="product" value="Стуло">
+				
+				<button class="close order_close" type="button">
+					<img src="img/icon/close.svg" alt="close" width="25" height="25">
+				</button>
+
+				<h2>Оформление заказа</h2>
+				<p class="sub-title">Вы заказываете</p>
+
+				<div class="modal__container">
+					<p>Arm Chair Queens Cosy Blue</p>
+					<div class="calculat">
+
+					<div class="quantity-block">
+						<button type="button" class="pluse button">+</button>
+							<input class="number num" type="number" name="number" value="1" data-price="15495" readonly>
+						<button type="button" class="minus button">-</button>
+					</div>
+
+					</div>
+					<b><span class="price">15 495</span><span> руб.</span></b>
+				</div>
+				
+
+				<h3>Ваши контактые данные</h3>
+
+				<div class="form-group">
+					<div><input type="text" class="form__field" name="name" placeholder="Введите ваше имя" required></div>
+					<div><input type="tel" name="phone" class="form__field" required placeholder="Ведите ваш телефон" pattern="\+7\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}"></div>
+					<div><button type="submit" class="btn" name="submit" value="отправить">оформить заказ</button></div>
+				</div>
+
+
+			</form>
+	</div>
+	
+	<div class="modal" id="thanks">
+		<button class="close thanks_close" type="button">
+					<img src="img/icon/close.svg" alt="close" width="25" height="25">
+		</button>
+
+		<h2>Спасибо <br>за доверие!</h2>
+		<p>Мы обязательно с вами свяжемся!</p>
+		<img src="img/modal.jpg" alt="modal">
+	</div>
+
+	<script src="js/scripts.min.js"></script>
+
+	</body>
+</html>

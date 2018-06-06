@@ -1,0 +1,101 @@
+
+@media only screen and (max-width : 1200px)
+
+	.header
+
+
+@media only screen and (max-width : 992px)
+	#thanks
+		padding: 40px
+
+	.modal
+		width: 320px
+		padding: 40px
+
+	.nav
+		position: fixed
+		display: block
+		width: 320px
+		height: 100%
+		flex-direction: column
+		right: -100%
+		top: 80px
+		z-index: -1
+		background: rgba(0, 0, 0, .9)
+		transition: all .3s
+
+		ul
+			display: flex
+			flex-direction: column
+			justify-content: center
+			margin-top: 40px
+			margin-left: 40px
+
+		li
+			margin: 0
+			margin-bottom: 10px
+
+		a
+			color: #fff
+			display: block
+			&::before
+				content: ''
+				width: 0
+				transform: scale(0)
+				transition: all .3s
+				position: absolute
+				bottom: 0
+				width: 80%
+				height: 1px
+				background-color: $accent
+				z-index: -1
+
+			&:hover
+				color: $accent
+				text-decoration: none
+				&::before
+					transform: scale(1)
+
+			&:focus
+				color: $accent
+				text-decoration: none
+				&::before
+					transform: scale(1)
+
+		&__order
+			display: block
+			margin-left: 40px
+
+		&__tel
+			display: block
+			margin-left: 40px
+
+	.hamburger
+		display: block
+		z-index: 1001
+		right: 15px
+
+	.hamburger-box
+		right: 0
+
+	.nav-active
+		right: 0px
+
+
+@media only screen and (max-width : 767px)
+	.header
+
+@media only screen and (max-width : 576px)
+	.header
+
+@media only screen and (max-width : 480px)
+	.header
+
+
+
+
+
+
+
+
+
