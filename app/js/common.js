@@ -1,8 +1,8 @@
 $(function() {
 
 //------------------------------гамбургер-----------------------------
-$('.hamburger--3dx').click(function() {
-  $(this).toggleClass('is-active');
+$('.hamburger').click(function() {
+  $(this).toggleClass('hamburger-active');
   $('nav').toggleClass('nav-active');
   $('header').toggleClass('header-menu');
 });
