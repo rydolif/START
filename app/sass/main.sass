@@ -4,11 +4,25 @@
 
 
 .header
-	position: relative
+	position: fixed
+	right: 0
+	left: 0
+	background-color: rgba(0, 0, 0, .5)
+	padding: 15px 0
+	transition: all .3s
+
+	&-active
+		background-color: rgba(0, 0, 0, .8)
+		padding: 5px 0
+		z-index: 1001
 
 	&__container
 		position: relative
-
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		align-items: center
+	
 .nav
 	ul
 		display: flex
@@ -19,38 +33,81 @@
 		margin-right: 55px
 		&:last-child
 			margin-right: 0
-	
-	a
-		position: relative
-		padding-right: 20px
-		font-size: 14px
-		color: #fff
-		z-index: 1
-		text-transform: uppercase
-		&::before
-			content: ''
-			width: 0
-			transform: scale(0)
-			transition: all .3s
-			position: absolute
-			bottom: -10px
-			width: 100%
-			height: 1px
-			background-color: $accent
-			z-index: -1
 
+.section
+	padding: 60px 0
+	&:nth-child(odd)
+		background-color: $text
+
+.section-header
+	background-image: url(../img/header-section-bg.jpg)
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+	padding: 300px 0
+
+	&__container
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		text-align: center
+
+.services
+	&__container
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		flex-wrap: wrap
+
+	&__item
+		display: flex
+		flex-direction: column
+		width: 32%
+		border: 1px solid rgba(33,33,33,.05);
+		border-radius: 8px
+		overflow: hidden
+		text-align: center
+		margin-bottom: 30px
+		&:nth-child(n+7)
+			margin-bottom: 0
 		&:hover
-			color: $accent
-			text-decoration: none
+
+
+		&_img
+			position: relative
+			overflow: hidden
+			height: 250px
+			width: 100%
+			display: flex
+			justify-content: center
+			align-items: center
+			z-index: 1
+			color: $text
 			&::before
-				transform: scale(1)
+				content: ""
+				z-index: -1
+				position: absolute
+				right: 0
+				left: 0
+				bottom: 0
+				top: 0
+				background-color: rgba(33,33,33,.5)
 
-		&:focus
-			color: $accent
-			text-decoration: none
-			&::before
-				transform: scale(1)
+			img
+				position: absolute
+				top: 0
+				bottom: 0
+				right: 0
+				left: 0
+				width: 100%
+				height: 100%
+				z-index: -2
+
+		&_content
+			padding: 20px
 
 
-
+.footer
+	height: 1000px
 @import "media" // Always at the end

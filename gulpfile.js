@@ -11,11 +11,11 @@ var gulp          = require('gulp'),
 		autoprefixer  = require('gulp-autoprefixer'),
 		notify        = require("gulp-notify"),
 		rsync         = require('gulp-rsync'),
-		
 		svgstore     = require('gulp-svgstore'),
 		svgmin       = require('gulp-svgmin'),
 		cheerio      = require('gulp-cheerio'),
-		rename       = require('gulp-rename');
+		rename       = require('gulp-rename'),
+		plumber = require('gulp-plumber');
 
 gulp.task('browser-sync', function() {
 	browsersync({
@@ -47,10 +47,13 @@ gulp.task('js', function() {
 		'app/libs/jquery.popupoverlay.js',
 		'app/libs/swiper/swiper.min.js',
 		'app/libs/fancybox/jquery.fancybox.js',
+		'app/libs/animation/wow.min.js',
+		'app/libs/jquery.myParallax.js',
 		'app/js/common.js', // Always at the end
 		])
+	.pipe(plumber())
 	.pipe(concat('scripts.min.js'))
-	.pipe(uglify()) // Mifify js (opt.)
+	// .pipe(uglify()) // Mifify js (opt.)
 	.pipe(gulp.dest('app/js'))
 	.pipe(browsersync.reload({ stream: true }))
 });

@@ -17,7 +17,6 @@
 }(function( $ ) {
 
 $.extend( $.fn, {
-
 	// http://jqueryvalidation.org/validate/
 	validate: function( options ) {
 
@@ -201,7 +200,7 @@ $.extend( $.fn, {
 
 		return data;
 	}
-} );
+});
 
 // Custom selectors
 $.extend( $.expr[ ":" ], {

@@ -10,22 +10,22 @@
 	<link rel="icon" href="img/favicon.ico">
 	<meta name="theme-color" content="#000">
 
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
 	<link rel="stylesheet" href="css/main.min.css">
 </head>
 
 <body>
-
+<!-- 
 	<div class="preloader">
 		<div class="pulse"></div>
 	</div>
-
+ -->
 	<header class="header">
 		<div class="container">
 			<div class="header__container">
 		
 				<div class="header__logo">
-					<a href="index.html"><img src="img/logo.svg" alt="logo" width="70" height="75"></a>
-					<a href="index.html">START</a>
+					<a href="index.html"><img src="img/logo.png" alt="logo" width="160" height="75"></a>
 				</div>
 
 				<button class="hamburger" type="button">
@@ -36,10 +36,10 @@
 
 				<nav class="nav">
 					<ul>
-						<li><a href="index.html">Главная</a></li>
-						<li><a href="catalog.html">Каталог</a></li>
-						<li><a href="about.html">О нас</a></li>
-						<li><a href="contacts.html">Контакты</a></li>
+						<li><a href="index.html" class="link">Головна</a></li>
+						<li><a href="catalog.html" class="link">Наші послуги</a></li>
+						<li><a href="about.html" class="link">Виконанні роботи</a></li>
+						<li><a href="contacts.html" class="link">Контакти</a></li>
 					</ul>
 				</nav>
 
@@ -49,10 +49,93 @@
 
 	<main class="main">
 		
-		<section class="section">
-			<div class="container"></div>
+		<section class="section-header section">
+			<div class="container">
+				<div class="section-header__container">
+					<h1 class="wow fadeInLeftBig" data-wow-duration="1s" data-wow-delay=".3s">"IRBIS" <br><span>Студія реклами</span></h1>
+					<a href="#" class="btn wow bounceInUp" data-wow-duration="1s" data-wow-delay=".3s">Заказати послуги</a>
+				</div>
+			</div>
 		</section>
 
+
+		<section class="services section">
+			<div class="container">
+				<div class="services__container">
+
+					<div class="services__item wow bounceInUp" data-wow-duration="1s" data-wow-delay=".1s">
+						<div class="services__item_img">
+							<img src="img/advertising.jpg" alt="Зовнішня реклама">
+							<h2>Зовнішня реклама</h2>
+						</div>
+					</div>
+
+					<div class="services__item wow bounceInUp" data-wow-duration="1s" data-wow-delay=".2s">
+						<div class="services__item_img">
+							<img src="img/polygraphy.jpg" alt="Зовнішня реклама">
+							<h2>Візітки</h2>
+						</div>
+					</div>
+
+					<div class="services__item wow bounceInUp" data-wow-duration="1s" data-wow-delay=".3s">
+						<div class="services__item_img">
+							<img src="img/souvenirs.jpg" alt="Рекламно-сувенірна продукція">
+							<h2>Рекламно-сувенірна <br>продукція</h2>
+						</div>
+					</div>
+
+					<div class="services__item wow bounceInUp" data-wow-duration="1s" data-wow-delay=".1s">
+						<div class="services__item_img">
+							<img src="img/menu.jpg" alt="Меню">
+							<h2>Меню</h2>
+						</div>
+					</div>
+
+					<div class="services__item wow bounceInUp" data-wow-duration="1s" data-wow-delay=".2s">
+						<div class="services__item_img">
+							<img src="img/catalog.jpg" alt="Поліграфічні послуги">
+							<h2>Каталог для компанії</h2>
+						</div>
+					</div>
+
+					<div class="services__item wow bounceInUp" data-wow-duration="1s" data-wow-delay=".3s">
+						<div class="services__item_img">
+							<img src="img/logotype.jpg" alt="Зовнішня реклама">
+							<h2>Логотипи</h2>
+						</div>
+					</div>
+
+					<div class="services__item wow bounceInUp" data-wow-duration="1s" data-wow-delay=".1s">
+						<div class="services__item_img">
+							<img src="img/booklet.jpg" alt="Зовнішня реклама">
+							<h2>Буклеты</h2>
+						</div>
+					</div>
+
+					<div class="services__item wow bounceInUp" data-wow-duration="1s" data-wow-delay=".2s">
+						<div class="services__item_img">
+							<img src="img/flyer.jpg" alt="Зовнішня реклама">
+							<h2>Флаєр різних форматів</h2>
+						</div>
+					</div>
+
+					<div class="services__item wow bounceInUp" data-wow-duration="1s" data-wow-delay=".3s">
+						<div class="services__item_img">
+							<img src="img/printing.jpg" alt="Зовнішня реклама">
+							<h2>Поліграфія</h2>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</section>
+	
+
+		<section class="services section parallax" data-parallax-image="img/about-bg.jpg">
+			<div class="container">
+				
+			</div>
+		</section>
 	</main>
 
 	<footer class="footer">

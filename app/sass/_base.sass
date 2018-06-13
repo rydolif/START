@@ -2,14 +2,15 @@
 
 
 //----------------------fonts---------------------
-$fonts: 'montserrat', sans-serif
-$title: 'playfairdisplay', sans-serif
+$fonts: 'Open Sans', sans-serif
 //---------------------end-fonts---------------------
 
 
 //----------------------color---------------------
-$accent: #cf816d
-$text: #232a32
+$accent: rgb(255, 204, 1)
+$text: #fafafa
+
+$dark: rgb(43, 42, 40)
 //---------------------end-color---------------------
 
 
@@ -22,7 +23,7 @@ body
 	min-width: 400px
 	font-family: $fonts
 	font-size: 14px
-	color: $text
+	color: $dark
 	line-height: 1.75
 	font-weight: 400
 
@@ -34,54 +35,18 @@ section
 	overflow: hidden
 	
 h1, h2, h3, h4, h5, h6
-	font-family: $title
 	font-weight: 700
 	line-height: 1.4
 	margin: 0
 	padding: 0
 
 h1
-	font-size: 72px
+	font-size: 60px
 	color: #fff
 	text-transform: uppercase
 	margin-bottom: 20px
-	line-height: 1.3
+	margin-bottom: 50px
 
-	span
-		text-transform: none
-
-h2
-	position: relative
-	font-size: 48px
-	line-height: 1.2
-
-	&::after
-		content: ""
-		display: block
-		width: 70%
-		height: 1px
-		background-color: $accent
-		margin-top: 20px
-		margin-bottom: 40px
-
-h3
-	font-family: $fonts
-	font-weight: 700
-	font-size: 18px
-	margin-bottom: 10px
-
-h4
-	font-size: 36px
-	color: #fff
-
-h5
-	font-family: $fonts
-	text-transform: uppercase
-	font-weight: 600
-	margin-bottom: 15px
-
-h6
-	font-size: 24px
 
 ul
 	margin: 0
@@ -133,6 +98,38 @@ a,
 a:focus,
 a:hover
 	outline: none
+
+.link
+	position: relative
+	z-index: 1
+	font-size: 14px
+	font-weight: 600
+	color: $text
+	text-transform: uppercase
+	&::before
+		content: ''
+		width: 0
+		transform: scale(0)
+		transition: all .3s
+		position: absolute
+		bottom: 0
+		width: 100%
+		height: 1px
+		background-color: $accent
+		z-index: -1
+
+	&:hover
+		color: $accent
+		text-decoration: none
+		&::before
+			transform: scale(1)
+
+	&:focus
+		color: $accent
+		text-decoration: none
+		&::before
+			transform: scale(1)
+
 
 @import "_base/preloader"
 @import "_base/btn"
