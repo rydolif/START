@@ -49,6 +49,7 @@ gulp.task('js', function() {
 		'app/libs/fancybox/jquery.fancybox.js',
 		'app/libs/animation/wow.min.js',
 		'app/libs/jquery.myParallax.js',
+		'app/libs/video/jquery.mb.YTPlayer.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(plumber())
