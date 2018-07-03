@@ -93,6 +93,3 @@ $('.hamburger').click(function() {
 $(window).on('load', function(){
   $('.preloader').delay(1000).fadeOut('slow');
 });
-
-//------------------------------parallax------------------------------
-$(".parallax").myParallax();
