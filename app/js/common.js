@@ -1,18 +1,4 @@
 $(function() {
-//-------------------about-slider----------------------
-  // var swiper = new Swiper('.about__slider', {
-  //   slidesPerView: 2,
-  //   slidesPerColumn: 2,
-  //   spaceBetween: 30,
-  //   navigation: {
-  //     nextEl: '.swiper-button-next',
-  //     prevEl: '.swiper-button-prev',
-  //   },
-  //   pagination: {
-  //     el: '.swiper-pagination',
-  //     type: 'fraction',
-  //   },
-  // });
 
 //------------------------------гамбургер-----------------------------
   $('.hamburger').click(function() {
@@ -104,3 +90,61 @@ $(function() {
 $(window).on('load', function(){
   $('.preloader').delay(1000).fadeOut('slow');
 });
+
+
+//----------------------------------------svg----------------------------------
+;( function( window, document )
+{
+  'use strict';
+
+  var file     = 'img/symbols.html',
+      revision = 1.2;
+
+  if( !document.createElementNS || !document.createElementNS( 'http://www.w3.org/2000/svg', 'svg' ).createSVGRect )
+      return true;
+
+  var isLocalStorage = 'localStorage' in window && window[ 'localStorage' ] !== null,
+      request,
+      data,
+      insertIT = function()
+      {
+          document.body.insertAdjacentHTML( 'afterbegin', data );
+      },
+      insert = function()
+      {
+          if( document.body ) insertIT();
+          else document.addEventListener( 'DOMContentLoaded', insertIT );
+      };
+
+  if( isLocalStorage && localStorage.getItem( 'inlineSVGrev' ) == revision )
+  {
+    data = localStorage.getItem( 'inlineSVGdata' );
+    if( data )
+    {
+        insert();
+        return true;
+    }
+  }
+
+  try
+  {
+    request = new XMLHttpRequest();
+    request.open( 'GET', file, true );
+    request.onload = function()
+      {
+        if( request.status >= 200 && request.status < 400 )
+          {
+            data = request.responseText;
+            insert();
+            if( isLocalStorage )
+            {
+              localStorage.setItem( 'inlineSVGdata',  data );
+              localStorage.setItem( 'inlineSVGrev',   revision );
+            }
+        }
+    }
+    request.send();
+  }
+  catch( e ){}
+
+}( window, document ) );
