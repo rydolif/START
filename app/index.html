@@ -10,7 +10,6 @@
 	<link rel="icon" href="img/favicon.ico">
 	<meta name="theme-color" content="#000">
 
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
 	<link rel="stylesheet" href="css/main.min.css">
 </head>
 
@@ -39,7 +38,7 @@
 						<li><a href="index.html" class="link">Головна</a></li>
 						<li><a href="catalog.html" class="link">Наші послуги</a></li>
 						<li><a href="about.html" class="link">Виконанні роботи</a></li>
-						<li><a href="contacts.html" class="link">Контакти <i class="fab fa-accessible-icon"></i></a></li>
+						<li><a href="contacts.html" class="link">Контакти</a></li>
 					</ul>
 				</nav>
 
@@ -48,108 +47,12 @@
 	</header>
 
 	<main class="main">
-		
-		<section class="section-header section" data-parallax="scroll" data-image-src="img/header-section-bg.jpg" data-speed=".1" data-bleed="1">
-			<div class="container">
-				<div class="section-header__container">
-					<h1 class="wow fadeInLeftBig" data-wow-duration="1s" data-wow-delay="1s">"IRBIS" <br><span>Студія реклами</span></h1>
-					<a href="#" class="btn wow bounceInUp" data-wow-duration="1s" data-wow-delay="1s">Заказати послуги</a>
-				</div>
-			</div>
 
-		<div id="bgndVideo" class="player" 
-			data-property="{
-			videoURL:'https://www.youtube.com/watch?v=KItKEvS9oXg&index=31&list=PLEY_rQ2ErgpfSsK0U1_eUBLNAjpGw4lhP',
-			containment:'.section-header',
-			autoPlay:true,
-			mute:true, 
-			startAt:0, 
-			opacity:1,
-			showControls : false
-		}">
-
-		</div>
-		</section>
-
-
-		<section class="services section">
+		<section class="header--content section" style="background-image: url(img/header-bg.jpg);">
 			<div class="container">
 
-				<h2>Нaші послуги</h2>
-
-				<div class="services__container">
-					<div class="services__item wow bounceInUp" data-wow-duration=".2s" data-wow-delay=".1s">
-						<div class="services__item_img">
-							<img src="img/advertising.jpg" alt="Зовнішня реклама">
-							<p>Зовнішня реклама</p>
-						</div>
-					</div>
-
-					<div class="services__item wow bounceInUp" data-wow-duration=".2s" data-wow-delay=".2s">
-						<div class="services__item_img">
-							<img src="img/polygraphy.jpg" alt="Зовнішня реклама">
-							<p>Візітки</p>
-						</div>
-					</div>
-
-					<div class="services__item wow bounceInUp" data-wow-duration="1s" data-wow-delay=".3s">
-						<div class="services__item_img">
-							<img src="img/souvenirs.jpg" alt="Рекламно-сувенірна продукція">
-							<p>Рекламно-сувенірна <br>продукція</p>
-						</div>
-					</div>
-
-					<div class="services__item wow bounceInUp" data-wow-duration="1s" data-wow-delay=".1s">
-						<div class="services__item_img">
-							<img src="img/menu.jpg" alt="Меню">
-							<p>Меню</p>
-						</div>
-					</div>
-
-					<div class="services__item wow bounceInUp" data-wow-duration="1s" data-wow-delay=".2s">
-						<div class="services__item_img">
-							<img src="img/catalog.jpg" alt="Поліграфічні послуги">
-							<p>Каталог для компанії</p>
-						</div>
-					</div>
-
-					<div class="services__item wow bounceInUp" data-wow-duration="1s" data-wow-delay=".3s">
-						<div class="services__item_img">
-							<img src="img/logotype.jpg" alt="Зовнішня реклама">
-							<p>Логотипи</p>
-						</div>
-					</div>
-
-					<div class="services__item wow bounceInUp" data-wow-duration="1s" data-wow-delay=".1s">
-						<div class="services__item_img">
-							<img src="img/booklet.jpg" alt="Зовнішня реклама">
-							<p>Буклеты</p>
-						</div>
-					</div>
-
-					<div class="services__item wow bounceInUp" data-wow-duration="1s" data-wow-delay=".2s">
-						<div class="services__item_img">
-							<img src="img/flyer.jpg" alt="Зовнішня реклама">
-							<p>Флаєр різних форматів</p>
-						</div>
-					</div>
-
-					<div class="services__item wow bounceInUp" data-wow-duration="1s" data-wow-delay=".3s">
-						<div class="services__item_img">
-							<img src="img/printing.jpg" alt="Зовнішня реклама">
-							<p>Поліграфія</p>
-						</div>
-					</div>
-					
-				</div>
 			</div>
 		</section>
-	
-<!-- 
-		<section class="services section parallax" data-parallax-image="img/about-bg.jpg">
-			<div class="container">
-			</div>
-		</section> -->
 
 	</main>
 
@@ -159,58 +62,31 @@
 		</div>
 	</footer>
 
-
-<!-- 
+	<!-- 	modal -->
 	<div class="modal" id="order">
+		<div class="wrapper">
+			<form action="sendmail.php" class="form" method="post">
 
-			<form action="sendmail.php" class="order-form" method="post">
+				<button class="close order_close" type="button"></button>
 
-				<input type="hidden" name="subject" value="Оформление заказа">
-				<input type="hidden" name="product" value="Стуло">
-				
-				<button class="close order_close" type="button">
-					<img src="img/icon/close.svg" alt="close" width="25" height="25">
-				</button>
-
-				<h2>Оформление заказа</h2>
-				<p class="sub-title">Вы заказываете</p>
-
-				<div class="modal__container">
-					<p>Arm Chair Queens Cosy Blue</p>
-					<div class="calculat">
-
-					<div class="quantity-block">
-						<button type="button" class="pluse button">+</button>
-							<input class="number num" type="number" name="number" value="1" data-price="15495" readonly>
-						<button type="button" class="minus button">-</button>
-					</div>
-
-					</div>
-					<b><span class="price">15 495</span><span> руб.</span></b>
-				</div>
-				
-
-				<h3>Ваши контактые данные</h3>
-
-				<div class="form-group">
-					<div><input type="text" class="form__field" name="name" placeholder="Введите ваше имя" required></div>
-					<div><input type="tel" name="phone" class="form__field" required placeholder="Ведите ваш телефон" pattern="\+7\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}"></div>
-					<div><button type="submit" class="btn" name="submit" value="отправить">оформить заказ</button></div>
-				</div>
-
+				<h3>Оставьте заявку, <br>мы свяжемся с Вами</h3>
+				<input type="hidden" name="subject" value="Узнать подробнее!">
+				<div class="footer__form_line"><input type="text" name="name" placeholder="Имя" required></div>
+				<div class="footer__form_line"><input type="tel" name="phone" required placeholder="Телефон" pattern="\+7\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}"></div>
+				<div><button type="submit" class="btn footer__form_btn" name="submit" value="отправить">Отправить</button></div>
+				<p>Нажимая на кнопку, вы даете согласие <br>на обработку своих <a href="#" target="_blank">персональных данных</a></p>
 
 			</form>
+		</div>
 	</div>
-	
-	<div class="modal" id="thanks">
-		<button class="close thanks_close" type="button">
-					<img src="img/icon/close.svg" alt="close" width="25" height="25">
-		</button>
 
-		<h2>Спасибо <br>за доверие!</h2>
+	<div class="modal" id="thanks">
+		<button class="close thanks_close" type="button"></button>
+
+		<h3>Спасибо <br>за доверие!</h3>
 		<p>Мы обязательно с вами свяжемся!</p>
-		<img src="img/modal.jpg" alt="modal">
-	</div> -->
+	</div>
+	<!-- 	modal end-->
 
 	<script src="js/scripts.min.js"></script>
 	<script>

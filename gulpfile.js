@@ -11,11 +11,11 @@ var gulp          = require('gulp'),
 		autoprefixer  = require('gulp-autoprefixer'),
 		notify        = require("gulp-notify"),
 		rsync         = require('gulp-rsync'),
-		svgstore     = require('gulp-svgstore'),
-		svgmin       = require('gulp-svgmin'),
-		cheerio      = require('gulp-cheerio'),
-		rename       = require('gulp-rename'),
-		plumber = require('gulp-plumber');
+		svgstore      = require('gulp-svgstore'),
+		svgmin        = require('gulp-svgmin'),
+		cheerio       = require('gulp-cheerio'),
+		rename        = require('gulp-rename'),
+		plumber       = require('gulp-plumber');
 
 gulp.task('browser-sync', function() {
 	browsersync({
@@ -34,7 +34,7 @@ gulp.task('styles', function() {
 	.pipe(sass({ outputStyle: 'expand' }).on("error", notify.onError()))
 	.pipe(rename({ suffix: '.min', prefix : '' }))
 	.pipe(autoprefixer(['last 15 versions']))
-	.pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Opt., comment out when debugging
+	// .pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Opt., comment out when debugging
 	.pipe(gulp.dest('app/css'))
 	.pipe(browsersync.reload( {stream: true} ))
 });
@@ -47,8 +47,7 @@ gulp.task('js', function() {
 		'app/libs/jquery.popupoverlay.js',
 		'app/libs/swiper/swiper.min.js',
 		// 'app/libs/fancybox/jquery.fancybox.js',
-		'app/libs/animation/wow.min.js',
-		'app/libs/myParallax.js',
+		// 'app/libs/animation/wow.min.js',
 		// 'app/libs/video/jquery.mb.YTPlayer.js',
 		'app/js/common.js', // Always at the end
 		])

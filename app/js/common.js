@@ -1,11 +1,11 @@
 $(function() {
 
 //------------------------------гамбургер-----------------------------
-$('.hamburger').click(function() {
-  $(this).toggleClass('hamburger-active');
-  $('nav').toggleClass('nav-active');
-  $('header').toggleClass('header-menu');
-});
+  $('.hamburger').click(function() {
+    $(this).toggleClass('hamburger-active');
+    $('nav').toggleClass('nav-active');
+    $('header').toggleClass('header-menu');
+  });
 
 //-------------------------------попандер---------------------------------------
   $('.modal').popup({transition: 'all 0.3s'});
@@ -17,48 +17,31 @@ $('.hamburger').click(function() {
 	   return this.optional(element) || phone_number.match(/\+[0-9]{1}\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}/);
 	}, "Введите Ваш телефон");
 
-  $(".order-form").validate({
-    messages: {
-      name: "Введите ваше Имя",
-      phone: "Введите ваш телефон",
-    },
-    rules: {
-      "phone": {
-        required: true,
-        phoneno: true
-      }
-    },
-    submitHandler: function(form) {
-      var t = {
-        name: jQuery(".order-form").find("input[name=name]").val(),
-        phone: jQuery(".order-form").find("input[name=phone]").val(),
-        number: jQuery(".order-form").find("input[name=number]").val(),
-        product: jQuery(".order-form").find("input[name=product]").val(),
-        subject: jQuery(".order-form").find("input[name=subject]").val()
-      };
-      ajaxSend('.order-form', t);
-    }
-  });
+  $(".form").each(function(index, el) {
+    $(el).addClass('form-' + index);
 
-  $(".consultation-form").validate({
-    messages: {
-      name: "Введите ваше Имя",
-      phone: "Введите ваш телефон",
-    },
-    rules: {
-      "phone": {
-        required: true,
-        phoneno: true
+    $('.form-' + index).validate({
+      rules: {
+        phone: {
+          required: true,
+          phoneno: true
+        },
+        name: 'required',
+      },
+      messages: {
+        name: "Введите Ваше имя",
+        phone: "Введите Ваш телефон",
+      },
+      submitHandler: function(form) {
+        var t = {
+          name: jQuery('.form-' + index).find("input[name=name]").val(),
+          phone: jQuery('.form-' + index).find("input[name=phone]").val(),
+          subject: jQuery('.form-' + index).find("input[name=subject]").val()
+        };
+        ajaxSend('.form-' + index, t);
       }
-    },
-    submitHandler: function(form) {
-      var t = {
-        name: jQuery(".consultation-form").find("input[name=name]").val(),
-        phone: jQuery(".consultation-form").find("input[name=phone]").val(),
-        subject: jQuery(".consultation-form").find("input[name=subject]").val()
-      };
-      ajaxSend('.consultation-form', t);
-    }
+    });
+
   });
 
   function ajaxSend(formName, data) {
@@ -86,6 +69,20 @@ $('.hamburger').click(function() {
       }
   });
 
+//-------------------------скорость якоря---------------------------------------
+  $(".header__list").on("click","a", function (event) {
+      event.preventDefault();
+      var id  = $(this).attr('href'),
+          top = $(id).offset().top;
+      $('body,html').animate({scrollTop: top - 60}, 'slow', 'swing');
+  //--------------------закриття меню при кліку на ссилку якоря--------------------
+     $('.hamburger').removeClass('hamburger-active');
+     $('.header-menu').removeClass('header-menu');
+     $('.header-active').removeClass('header-active');
+     $('.nav-active').removeClass('nav-active');
+
+  });
+  
 });
 
 //----------------------------------------preloader----------------------------------

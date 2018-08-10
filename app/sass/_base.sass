@@ -7,25 +7,18 @@ $title: 'GothamPro', sans-serif
 $fontawesome: 'fontawesome', sans-serif
 //---------------------end-fonts---------------------
 
-
 //----------------------color---------------------
-$accent: rgb(255, 204, 1)
+$accent: #000
 $text: #fafafa
-
-$dark: rgb(43, 42, 40)
 //---------------------end-color---------------------
-
-
-html, body
-	height: 100%
 
 body
 	overflow-x: hidden
 	position: relative
-	min-width: 400px
+	min-width: 320px
 	font-family: $fonts
 	font-size: 14px
-	color: $dark
+	color: $text
 	line-height: 1.75
 	font-weight: 400
 
@@ -43,17 +36,6 @@ h1, h2, h3, h4, h5, h6
 	padding: 0
 	font-family: $title
 
-h1
-	font-size: 60px
-	color: #fff
-	text-transform: uppercase
-	margin-bottom: 20px
-	margin-bottom: 50px
-
-h2
-	text-align: center
-	font-size: 40px
-	margin-bottom: 30px
 ul
 	margin: 0
 	padding: 0
@@ -87,13 +69,6 @@ input, textarea
 		text-transform: uppercase
 		line-height: 1
 
-input
-	padding: 15px 25px
-	border-radius: 40px
-	font-weight: 400
-	line-height: 1
-	text-align: center
-
 b, strong
 	font-weight: 700
 
@@ -105,13 +80,11 @@ a,
 a:focus,
 a:hover
 	outline: none
+	text-decoration: none
 
 .link
 	position: relative
 	z-index: 1
-	font-size: 14px
-	font-weight: 600
-	color: $text
 	text-transform: uppercase
 	&::before
 		content: ''
@@ -139,6 +112,7 @@ a:hover
 
 
 @import "_base/preloader"
+@import "_base/animation"
 @import "_base/btn"
 @import "_base/form"
 @import "_base/modal"

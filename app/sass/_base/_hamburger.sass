@@ -19,10 +19,7 @@
 		position: relative
 		display: inline-block
 		width: 35px
-		height: 25px
-		top: 50%
 		perspective: 80px
-
 
 	&__item
 		position: absolute
@@ -51,7 +48,7 @@
 			display: block
 			position: absolute
 			right: 0
-			bottom: -10px
+			top: -20px
 			background-color: #000
 			width: 35px
 			height: 3px
@@ -64,8 +61,8 @@
 			background-color: transparent
 			transform: rotateY(180deg)
 			&::before
-				transform: translate3d(0, 10px, 0) rotate(45deg)
+				transform: translate3d(0, 0px, 0) rotate(45deg)
 			&::after
-				transform: translate3d(0, -10px, 0) rotate(-45deg)
+				transform: translate3d(0, 10px, 0) rotate(-45deg)
 
 
