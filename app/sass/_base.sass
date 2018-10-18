@@ -3,12 +3,15 @@
 
 //----------------------fonts---------------------
 $fonts: 'GothamPro', sans-serif
-$fontawesome: 'fontawesome', sans-serif
+$fw: 'Font Awesome 5 Brands', sans-serif
 //---------------------end-fonts---------------------
 
 //----------------------color---------------------
 $accent: #000
-$text: #fafafa
+$text: #000
+$btn: #666
+$title: #333
+
 //---------------------end-color---------------------
 
 body
@@ -84,35 +87,6 @@ a:focus,
 a:hover
 	outline: none
 	text-decoration: none
-
-.link
-	position: relative
-	z-index: 1
-	text-transform: uppercase
-	&::before
-		content: ''
-		width: 0
-		transform: scale(0)
-		transition: all .3s
-		position: absolute
-		bottom: 0
-		width: 100%
-		height: 1px
-		background-color: $accent
-		z-index: -1
-
-	&:hover
-		color: $accent
-		text-decoration: none
-		&::before
-			transform: scale(1)
-
-	&:focus
-		color: $accent
-		text-decoration: none
-		&::before
-			transform: scale(1)
-
 
 @import "_base/preloader"
 @import "_base/animation"

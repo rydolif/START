@@ -1,6 +1,5 @@
 @import "libs"
 @import "base"
-@import "page"
 
 
 .header
@@ -12,11 +11,11 @@
 	transition: all .3s
 	z-index: 1001
 
-	&-active
+	&--active
 		background-color: rgba(0, 0, 0, .8)
 		padding: 5px 0
 
-	&-menu
+	&--menu
 		background-color: rgba(0, 0, 0, .8)
 		padding: 5px 0
 
@@ -38,24 +37,37 @@
 		&:last-child
 			margin-right: 0
 
-.grid-item
-	width: 100%
-	height: 100px
-	background: #000
+	a
+		position: relative
+		z-index: 1
+		text-transform: uppercase
+		&::before
+			content: ''
+			width: 0
+			transform: scale(0)
+			transition: all .3s
+			position: absolute
+			bottom: 0
+			width: 100%
+			height: 1px
+			background-color: $accent
+			z-index: -1
 
-	&--width2
-		background: red
-		width: 200px
-		height: 100px
-	&--width3
-		background: blue
-		width: 200px
-		height: 
-	&--width4
-		background: #fff
-		width: 200px
-		height: 100px
+		&:hover
+			color: $accent
+			text-decoration: none
+			&::before
+				transform: scale(1)
+
+		&:focus
+			color: $accent
+			text-decoration: none
+			&::before
+				transform: scale(1)
 
 .footer
 	height: 1000px
+
+
+@import "page"
 @import "media" // Always at the end

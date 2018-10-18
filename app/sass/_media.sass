@@ -37,30 +37,9 @@
 
 		a
 			color: #fff
-			display: block
-			&::before
-				content: ''
-				width: 0
-				transform: scale(0)
-				transition: all .3s
-				position: absolute
-				bottom: 0
-				width: 80%
-				height: 1px
-				background-color: $accent
-				z-index: -1
-
-			&:hover
-				color: $accent
-				text-decoration: none
-				&::before
-					transform: scale(1)
-
-			&:focus
-				color: $accent
-				text-decoration: none
-				&::before
-					transform: scale(1)
+		
+		&--active
+			right: 0
 
 	.hamburger
 		display: block

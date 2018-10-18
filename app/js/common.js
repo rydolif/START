@@ -1,16 +1,11 @@
 $(function() {
-  
-//----------------------------masonry-------------------------------
-  $('.grid').masonry({
-    itemSelector: '.grid-item',
-    columnWidth: 1
-  });
+
 
 //------------------------------гамбургер-----------------------------
   $('.hamburger').click(function() {
-    $(this).toggleClass('hamburger-active');
-    $('nav').toggleClass('nav-active');
-    $('header').toggleClass('header-menu');
+    $(this).toggleClass('hamburger--active');
+    $('nav').toggleClass('nav--active');
+    $('header').toggleClass('header--menu');
   });
 
 //-------------------------------попандер---------------------------------------
@@ -68,10 +63,10 @@ $(function() {
 //----------------------------------------fixed----------------------------------
   $(window).scroll(function(){
       if($(this).scrollTop()>20){
-          $('.header').addClass('header-active');
+          $('.header').addClass('header--active');
       }
       else if ($(this).scrollTop()<20){
-          $('.header').removeClass('header-active');
+          $('.header').removeClass('header--active');
       }
   });
 
@@ -82,10 +77,10 @@ $(function() {
           top = $(id).offset().top;
       $('body,html').animate({scrollTop: top - 60}, 'slow', 'swing');
   //--------------------закриття меню при кліку на ссилку якоря--------------------
-     // $('.hamburger').removeClass('hamburger-active');
+     // $('.hamburger').removeClass('hamburger--active');
      // $('.header-menu').removeClass('header-menu');
-     // $('.header-active').removeClass('header-active');
-     // $('.nav-active').removeClass('nav-active');
+     // $('.header--active').removeClass('header--active');
+     // $('.nav--active').removeClass('nav--active');
 
   });
   
@@ -97,60 +92,3 @@ $(function() {
     $('.preloader').delay(1000).fadeOut('slow');
   });
 
-
-//----------------------------------------svg----------------------------------
-  // ;( function( window, document )
-  // {
-  //   'use strict';
-
-  //   var file     = 'img/symbols.html',
-  //       revision = 1.2;
-
-  //   if( !document.createElementNS || !document.createElementNS( 'http://www.w3.org/2000/svg', 'svg' ).createSVGRect )
-  //       return true;
-
-  //   var isLocalStorage = 'localStorage' in window && window[ 'localStorage' ] !== null,
-  //       request,
-  //       data,
-  //       insertIT = function()
-  //       {
-  //           document.body.insertAdjacentHTML( 'afterbegin', data );
-  //       },
-  //       insert = function()
-  //       {
-  //           if( document.body ) insertIT();
-  //           else document.addEventListener( 'DOMContentLoaded', insertIT );
-  //       };
-
-  //   if( isLocalStorage && localStorage.getItem( 'inlineSVGrev' ) == revision )
-  //   {
-  //     data = localStorage.getItem( 'inlineSVGdata' );
-  //     if( data )
-  //     {
-  //         insert();
-  //         return true;
-  //     }
-  //   }
-
-  //   try
-  //   {
-  //     request = new XMLHttpRequest();
-  //     request.open( 'GET', file, true );
-  //     request.onload = function()
-  //       {
-  //         if( request.status >= 200 && request.status < 400 )
-  //           {
-  //             data = request.responseText;
-  //             insert();
-  //             if( isLocalStorage )
-  //             {
-  //               localStorage.setItem( 'inlineSVGdata',  data );
-  //               localStorage.setItem( 'inlineSVGrev',   revision );
-  //             }
-  //         }
-  //     }
-  //     request.send();
-  //   }
-  //   catch( e ){}
-
-  // }( window, document ) );
