@@ -41,14 +41,16 @@ gulp.task('styles', function() {
 
 gulp.task('js', function() {
 	return gulp.src([
-		'app/libs/jquery/dist/jquery.min.js',
-		'app/libs/jquery.validate.js',
-		'app/libs/jquery.mask.min.js',
-		'app/libs/jquery.popupoverlay.js',
-		'app/libs/slick/slick.js',
-		// 'app/libs/swiper/swiper.min.js',
-		// 'app/libs/fancybox/jquery.fancybox.js',
-		// 'app/libs/masonry.pkgd.js',
+		'app/libs/jquery/dist/jquery.min.js',  			//----jquery
+		'app/libs/jquery.validate.js', 					//----форма
+		'app/libs/jquery.mask.min.js', 					//----форма
+		'app/libs/jquery.popupoverlay.js', 				//----модалки
+		'app/libs/slick/slick.js', 						//----слайдер
+		// 'app/libs/swiper/swiper.min.js', 			//----слайдер
+		// 'app/libs/fancybox/jquery.fancybox.js', 		//----картінка прикліку
+		// 'app/libs/jquery.spincrement.min.js', 		//----цифри анімованні
+		// 'app/libs/masonry.pkgd.js',					//----сетка елементов
+		// 'app/libs/isotope.pkgd.min.js', 				//----сетка елементов + фильтр
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(plumber())
