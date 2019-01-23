@@ -1,5 +1,5 @@
 <?php
-	$SITE_TITLE = 'LeoLoft';
+	$SITE_TITLE = 'Message';
 	$SITE_DESCR = '';
 
 	if ( isset($_POST) ) {
@@ -14,6 +14,7 @@
 
 		$headers = "From: $SITE_TITLE \r\n";
 		$headers .= "Reply-To: ". $email . "\r\n";
+		$headers .= 'MIME-Version: 1.0' . "\r\n";
 		$headers .= "Content-Type: text/html; charset=utf-8\r\n";
 
 		$data = '<h1>'.$subject."</h1>";

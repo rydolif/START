@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>start</title>
+	<title>Start</title>
 	<meta name="description" content="">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -15,9 +15,9 @@
 
 <body>
 
-	<div class="preloader">
+<!-- 	<div class="preloader">
 		<div class="pulse"></div>
-	</div>
+	</div> -->
 
 	<header class="header">
 		<div class="container">
@@ -53,6 +53,7 @@
 
 			</div>
 		</section>
+
 	</main>
 
 	<footer class="footer">
@@ -61,31 +62,31 @@
 		</div>
 	</footer>
 
-	<!-- 	modal -->
-	<div class="modal" id="order">
-		<div class="wrapper">
-			<form action="sendmail.php" class="form" method="post">
+	<!-- modal -->
+		<div class="modal" id="order">
+			<div class="wrapper">
+				<form action="sendmail.php" class="form" method="post">
 
-				<button class="close order_close" type="button"></button>
+					<button class="close order_close" type="button"></button>
 
-				<h3>Оставьте заявку, <br>мы свяжемся с Вами</h3>
-				<input type="hidden" name="subject" value="Узнать подробнее!">
-				<div class="footer__form_line"><input type="text" name="name" placeholder="Имя" required></div>
-				<div class="footer__form_line"><input type="tel" name="phone" required placeholder="Телефон" pattern="\+7\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}"></div>
-				<div><button type="submit" class="btn footer__form_btn" name="submit" value="отправить">Отправить</button></div>
-				<p>Нажимая на кнопку, вы даете согласие <br>на обработку своих <a href="#" target="_blank">персональных данных</a></p>
+					<h3>Оставьте заявку, <br>мы свяжемся с Вами</h3>
+					<input type="hidden" name="subject" value="Узнать подробнее!">
+					<div class="footer__form_line"><input type="text" name="name" placeholder="Имя" required></div>
+					<div class="footer__form_line"><input type="tel" name="phone" required placeholder="Телефон"></div>
+					<div><button type="submit" class="btn footer__form_btn" name="submit">Отправить</button></div>
+					<p>Нажимая на кнопку, вы даете согласие <br>на обработку своих <a href="#" target="_blank">персональных данных</a></p>
 
-			</form>
+				</form>
+			</div>
 		</div>
-	</div>
 
-	<div class="modal" id="thanks">
-		<button class="close thanks_close" type="button"></button>
+		<div class="modal" id="thanks">
+			<button class="close thanks_close" type="button"></button>
 
-		<h3>Спасибо <br>за доверие!</h3>
-		<p>Мы обязательно с вами свяжемся!</p>
-	</div>
-	<!-- 	modal end-->
+			<h3>Спасибо <br>за доверие!</h3>
+			<p>Мы обязательно с вами свяжемся!</p>
+		</div>
+	<!-- modal end-->
 
 	<script src="js/scripts.min.js"></script>
 </body>

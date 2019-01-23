@@ -1,6 +1,5 @@
 $(function() {
 
-
 //------------------------------гамбургер-----------------------------
   $('.hamburger').click(function() {
     $(this).toggleClass('hamburger--active');
@@ -103,22 +102,11 @@ $(function() {
   //       }
   //   });
 
-
-  
-  // //--------------------------------------scroll------------------------------
-  //   $('.chat__content').jScrollPane();
-
   
 });
 
 //----------------------------------------preloader----------------------------------
 
-  $(window).on('load', function(){
-    $('.preloader').delay(1000).fadeOut('slow');
-  });
-
-// //--------------------------------------scroll------------------------------
-
-//   $(window).resize(function(event) {
-//     $('.chat__content').jScrollPane();
-//   });
+  // $(window).on('load', function(){
+  //   $('.preloader').delay(1000).fadeOut('slow');
+  // });
