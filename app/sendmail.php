@@ -5,8 +5,6 @@
 	if ( isset($_POST) ) {
 		$name = htmlspecialchars(trim($_POST['name']));
 		$phone = htmlspecialchars(trim($_POST['phone']));
-		$number = htmlspecialchars(trim($_POST['number']));
-		$product = htmlspecialchars(trim($_POST['product']));
 		$subject = $_POST['subject'] ? htmlspecialchars(trim($_POST['subject'])) : '';
 		$comment = isset($_POST['comment']) ? htmlspecialchars(trim($_POST['comment'])) : '';
 		$question = isset($_POST['question']) ? htmlspecialchars(trim($_POST['question'])) : '';
@@ -22,22 +20,6 @@
 		$data .= 'Телефон: '.$phone."<br>";
 
 
-		if ( $number != '' ) {
-			$data .= 'Количество: ' . $number ."<br>";
-		}
-
-		if ( $product != '' ) {
-			$data .= 'Название товара: ' . $product ."<br>";
-		}
-
-
-		if ( $comment != '' ) {
-			$data .= 'Комментарий: ' . $comment;
-		}
-
-		if ( $question != '' ) {
-			$data .= 'Вопрос: ' . $question;
-		}
 
 		$message = "<div style='background:#ccc;border-radius:10px;padding:20px;'>
 				".$data."
