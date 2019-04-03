@@ -11,6 +11,7 @@
 	<meta name="theme-color" content="#000">
 
 	<link rel="stylesheet" href="css/main.min.css?v=1">
+
 </head>
 
 <body>
@@ -48,7 +49,7 @@
 
 	<main class="main">
 
-		<section class="section">
+		<section class="section" id="app">
 			<div class="container">
 
 			</div>
@@ -64,30 +65,42 @@
 
 	<!-- modal -->
 		<div class="modal" id="order">
-			<div class="wrapper">
-				<form action="sendmail.php" class="form" method="post">
+			<form action="sendmail.php" class="form" method="post">
 
-					<button class="close order_close" type="button"></button>
+				<button class="close order_close" type="button">
+					<span></span>
+					<span></span>
+				</button>
 
-					<h3>Оставьте заявку, <br>мы свяжемся с Вами</h3>
-					<input type="hidden" name="subject" value="Узнать подробнее!">
-					<div class="footer__form_line"><input type="text" name="name" placeholder="Имя" required></div>
-					<div class="footer__form_line"><input type="tel" name="phone" required placeholder="Телефон"></div>
-					<div><button type="submit" class="btn footer__form_btn" name="submit">Отправить</button></div>
-					<p>Нажимая на кнопку, вы даете согласие <br>на обработку своих <a href="#" target="_blank">персональных данных</a></p>
+				<h3>Оставьте заявку, <br>мы свяжемся с Вами</h3>
+				<input type="hidden" name="subject" value="Узнать подробнее!">
 
-				</form>
-			</div>
+				<div class="">
+					<input type="text" name="name" placeholder="Имя" required>
+				</div>
+				<div class="">
+					<input type="tel" name="phone" required placeholder="Телефон">
+				</div>
+				<div class="">
+					<button type="submit" class="btn" name="submit">Отправить</button>
+				</div>
+				<p>Нажимая на кнопку, вы даете согласие <br>на обработку своих <a href="#" target="_blank">персональных данных</a></p>
+
+			</form>
 		</div>
 
 		<div class="modal" id="thanks">
-			<button class="close thanks_close" type="button"></button>
-
+			<button class="close thanks_close" type="button">
+				<span></span>
+				<span></span>
+			</button>
 			<h3>Спасибо <br>за доверие!</h3>
 			<p>Мы обязательно с вами свяжемся!</p>
 		</div>
 	<!-- modal end-->
 
 	<script src="js/scripts.min.js"></script>
+
+
 </body>
 </html>

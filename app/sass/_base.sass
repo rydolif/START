@@ -3,7 +3,7 @@
 
 //----------------------fonts---------------------
 $fonts: 'GothamPro', sans-serif
-$fw: 'Font Awesome 5 Brands', sans-serif
+// $fw: 'Font Awesome 5 Brands', sans-serif
 //---------------------end-fonts---------------------
 
 //----------------------color---------------------
@@ -21,7 +21,7 @@ body
 	font-family: $fonts
 	font-size: 14px
 	color: $text
-	line-height: 1.75
+	line-height: 1.4
 	font-weight: 400
 
 ::selection
@@ -53,29 +53,39 @@ i
 	color: #fff
 
 input, textarea
-	border: #808080 1px solid
+	border: #000 1px solid
 	border-radius: 0
 	outline: none
 	box-shadow: none
 	-webkit-appearance: none
+	width: 100%
+	height: 50px
 	
 	&:focus:required:invalid
-		border-color: #808080
+		border-color: red
 		outline: none
 		box-shadow: none
 		-webkit-appearance: none
 
 	&:required:valid
-		border-color: #808080
+		border-color: green
 		outline: none
 		box-shadow: none
 		-webkit-appearance: none
 
 	&::placeholder
-		color: #808080
-		font-size: 12px
-		text-transform: uppercase
-		line-height: 1
+		color: #000
+
+input
+	height: 50px
+	line-height: 50px
+
+	&::placeholder
+		line-height: 50px
+
+textarea
+	&::placeholder
+		line-height: 1.4
 
 b, strong
 	font-weight: 700
@@ -86,9 +96,14 @@ p
 
 a,
 a:focus,
-a:hover
+a:hover,
+button,
+button:focus,
+button:hover,
 	outline: none
 	text-decoration: none
+
+
 
 @import "_base/preloader"
 @import "_base/animation"
