@@ -1,23 +1,9 @@
-@import vars
-@import fonts
-@import libs
+@import 'vars'
+@import 'mixin'
+@import 'fonts'
+@import 'libs'
+@import 'parts'
 
-::placeholder
-	color: $accent
-
-::selection
-	background-color: $accent
-	color: $accent
-
-body
-	overflow-x: hidden
-	position: relative
-	min-width: 320px
-	font-family: $fonts
-	font-size: 20px
-	color: $text
-	line-height: 1.2
-	font-weight: 400
 
 h1, h2, h3, h4, h5, h6
 	font-weight: 700
@@ -26,27 +12,11 @@ h1, h2, h3, h4, h5, h6
 h1
 	color: #fff
 	font-size: 62px
-	text-transform: uppercase
-
-input, textarea, button, a
-	outline: none
 
 input, textarea
 	border: #000 1px solid
 	border-radius: 0
-	// -webkit-appearance: none //radio+checkbox
 	color: #000
-	transition: all .6s
-
-	&:focus:required:invalid
-		border-color: red
-		box-shadow: none
-		-webkit-appearance: none
-
-	&:required:valid
-		border-color: green
-		box-shadow: none
-		-webkit-appearance: none
 
 input
 	height: 50px
@@ -57,10 +27,9 @@ input
 		line-height: 50px
 
 textarea
-	padding: 15px
-	resize: none
 	height: 100px
-
+	padding: 15px
+	
 	&::placeholder
 		line-height: 1.4
 
@@ -71,40 +40,7 @@ textarea
 	background-size: cover
 
 
-
-
-
-
-
-// // Custom Sass / Remove before use
-
-// .container
-// 	max-width: 700px
-// 	padding:
-// 		right: $gutter/2
-// 		left: $gutter/2
-// 	margin:
-// 		left: auto
-// 		right: auto
-
-// .img-responsive
-// 	display: block
-// 	max-width: 100%
-// 	height: auto
-
-// .example-grid
-// 	display: grid
-// 	grid-gap: $gutter
-// 	grid-template-columns: 1fr 1fr
-// 	grid-template-areas: "left right"
-// 	> div:first-child
-// 		grid-area: left
-// 	> div:last-child
-// 		grid-area: right
-// 	+media-breakpoint-down(xs)
-// 		display: block
-// 		> div
-// 			padding: $gutter/2 0
-
-// .parent // Lazy Load Placeholder Generator: https://webdesign-master.ru/services/lazy/
-// 	background-image: url(data:image/gif;base64,R0lGODlhCgAIAIABAN3d3f///yH5BAEAAAEALAAAAAAKAAgAAAINjAOnyJv2oJOrVXrzKQA7)
+	h1
+		&::before,
+		&::after
+			@include pseudo

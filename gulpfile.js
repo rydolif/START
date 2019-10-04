@@ -43,6 +43,11 @@ gulp.task('scripts', function() {
 	return gulp.src([
 		'node_modules/jquery/dist/jquery.min.js', // Optional jQuery plug-in (npm i --save-dev jquery)
 		'app/js/_lazy.js', // JS library plug-in example
+		'node_modules/swiper/js/swiper.min.js', // Optional (npm i --save-dev swiper)
+		'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js', // Optional (npm i --save-dev @fancyapps/fancybox)
+		'app/js/_jquery.validate.js',
+		'app/js/_jquery.mask.min.js',
+		'app/js/_jquery.popupoverlay.js',
 		'app/js/_custom.js', // Custom scripts. Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
