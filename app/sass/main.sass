@@ -1,69 +1,110 @@
-@import "libs"
-@import "base"
+@import vars
+@import fonts
+@import libs
+
+::placeholder
+	color: $accent
+
+::selection
+	background-color: $accent
+	color: $accent
+
+body
+	overflow-x: hidden
+	position: relative
+	min-width: 320px
+	font-family: $fonts
+	font-size: 20px
+	color: $text
+	line-height: 1.2
+	font-weight: 400
+
+h1, h2, h3, h4, h5, h6
+	font-weight: 700
+	line-height: 1.2
+
+h1
+	color: #fff
+	font-size: 62px
+	text-transform: uppercase
+
+input, textarea, button, a
+	outline: none
+
+input, textarea
+	border: #000 1px solid
+	border-radius: 0
+	// -webkit-appearance: none //radio+checkbox
+	color: #000
+	transition: all .6s
+
+	&:focus:required:invalid
+		border-color: red
+		box-shadow: none
+		-webkit-appearance: none
+
+	&:required:valid
+		border-color: green
+		box-shadow: none
+		-webkit-appearance: none
+
+input
+	height: 50px
+	line-height: 50px
+	padding: 0 15px
+
+	&::placeholder
+		line-height: 50px
+
+textarea
+	padding: 15px
+	resize: none
+	height: 100px
+
+	&::placeholder
+		line-height: 1.4
 
 
-.header
-	position: fixed
-	right: 0
-	left: 0
-	background-color: rgba(0, 0, 0, .5)
-	padding: 15px 0
-	transition: all .3s
-	z-index: 1001
-
-	&--active, &--menu
-		background-color: rgba(0, 0, 0, .8)
-		padding: 5px 0
+.hero
+	background-image: url(data:image/gif;base64,R0lGODlhCgAIAIABAN3d3f///yH5BAEAAAEALAAAAAAKAAgAAAINjAOnyJv2oJOrVXrzKQA7)
+	background-repeat: no-repeat
+	background-size: cover
 
 
-	&__container
-		position: relative
-		display: flex
-		justify-content: space-between
-		align-items: center
 
 
-.main
-	padding: 400px 0
-	
-.nav
-	ul
-		display: flex
-		justify-content: space-between
-
-	li
-		margin-right: 55px
-		&:last-child
-			margin-right: 0
-
-	a
-		position: relative
-		z-index: 1
-		text-transform: uppercase
-
-		&::before
-			content: ''
-			width: 0
-			transform: scale(0)
-			transition: all .3s
-			position: absolute
-			bottom: 0
-			width: 100%
-			height: 1px
-			background-color: $accent
-			z-index: -1
-
-		&:hover,
-		&:focus
-			color: $accent
-			text-decoration: none
-			&::before
-				transform: scale(1)
 
 
-.footer
-	height: 1000px
 
+// // Custom Sass / Remove before use
 
-@import "page"
-@import "media" // Always at the end
+// .container
+// 	max-width: 700px
+// 	padding:
+// 		right: $gutter/2
+// 		left: $gutter/2
+// 	margin:
+// 		left: auto
+// 		right: auto
+
+// .img-responsive
+// 	display: block
+// 	max-width: 100%
+// 	height: auto
+
+// .example-grid
+// 	display: grid
+// 	grid-gap: $gutter
+// 	grid-template-columns: 1fr 1fr
+// 	grid-template-areas: "left right"
+// 	> div:first-child
+// 		grid-area: left
+// 	> div:last-child
+// 		grid-area: right
+// 	+media-breakpoint-down(xs)
+// 		display: block
+// 		> div
+// 			padding: $gutter/2 0
+
+// .parent // Lazy Load Placeholder Generator: https://webdesign-master.ru/services/lazy/
+// 	background-image: url(data:image/gif;base64,R0lGODlhCgAIAIABAN3d3f///yH5BAEAAAEALAAAAAAKAAgAAAINjAOnyJv2oJOrVXrzKQA7)
